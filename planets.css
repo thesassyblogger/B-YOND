@@ -1,0 +1,166 @@
+.pnt-main {
+    position: relative;
+}
+
+.bgimg img {
+    justify-content: center;
+    /* position: absolute; */
+    margin-top: 5vw;
+    margin-left: 10vw;
+    z-index: -1;
+}
+
+.pnt-list {
+    position: absolute;
+    margin-top: -145vw;
+    background-color: transparent;
+}
+
+#mercury {
+    /* position: absolute; */
+    width: 30vw;
+    height: 10vw;
+    right: 40vw;
+    margin-bottom: 2vw;
+    display: flex;
+    margin-top: -60;
+    margin-left: 60vw;
+    background-color: transparent;
+}
+
+.mer-img img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 5vw;
+    /* margin-top: 2vw; */
+}
+
+#planet {
+    font-size: 2vw;
+}
+
+#venus {
+    /* position: absolute; */
+    width: 30vw;
+    height: 10vw;
+    right: 40vw;
+    margin-bottom: 7vw;
+    display: flex;
+    margin-top: -50;
+    margin-left: 26vw;
+}
+
+.ven-img img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 3vw;
+    /* margin-top: 2vw; */
+}
+
+#earth {
+    /* position: absolute; */
+    width: 30vw;
+    height: 10vw;
+    right: 40vw;
+    margin-bottom: 8vw;
+    display: flex;
+    margin-top: -50;
+    margin-left: 15vw;
+}
+
+.ear-img img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 3vw;
+    /* margin-top: 2vw; */
+}
+
+#mars {
+    /* position: absolute; */
+    width: 30vw;
+    height: 10vw;
+    right: 40vw;
+    margin-bottom: 8vw;
+    display: flex;
+    margin-top: -50;
+    margin-left: 10vw;
+}
+
+.mars-img img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 3vw;
+    /* margin-top: 2vw; */
+}
+
+#jupiter {
+    /* position: absolute; */
+    width: 30vw;
+    height: 10vw;
+    right: 40vw;
+    margin-bottom: 8vw;
+    display: flex;
+    margin-top: -50;
+    margin-left: 7vw;
+}
+
+.jup-img img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 3vw;
+    /* margin-top: 2vw; */
+}
+
+#saturn {
+    /* position: absolute; */
+    width: 30vw;
+    height: 10vw;
+    right: 40vw;
+    margin-bottom: 8vw;
+    display: flex;
+    margin-top: -50;
+    margin-left: 8vw;
+}
+
+.sat-img img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 3vw;
+    /* margin-top: 2vw; */
+}
+
+#uranus {
+    /* position: absolute; */
+    width: 30vw;
+    height: 10vw;
+    right: 40vw;
+    margin-bottom: 8vw;
+    display: flex;
+    margin-top: -50;
+    margin-left: 20vw;
+}
+
+.ura-img img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 3vw;
+    /* margin-top: 2vw; */
+}
+
+#neptune {
+    /* position: absolute; */
+    width: 30vw;
+    height: 10vw;
+    right: 40vw;
+    margin-bottom: 8vw;
+    display: flex;
+    margin-top: -50;
+    margin-left: 47vw;
+}
+
+.net-img img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 3vw;
+    /* margin-top: 2vw; */
+}

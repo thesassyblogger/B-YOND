@@ -1,0 +1,100 @@
+/* {
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Marck Script', cursive;
+    font-family: 'Lato', sans-serif;
+} */
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-yellow {
+    background-color: rgb(239, 236, 28);
+}
+
+.bg-pink {
+    background-color: rgb(166, 73, 105);
+}
+
+.bg-purple {
+    background-color: rgb(170, 70, 105);
+}
+
+.bg-ltpurple {
+    background-color: rgb(207, 112, 145);
+}
+
+.bg-pinkgrad {
+    background-image: linear-gradient(purple, palevioletred);
+}
+
+.bg-grey {
+    background-color: gray;
+}
+
+.rad2 {
+    border-radius: 2vw
+}
+
+.boxsadnone {
+    box-shadow: none;
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+}
+
+.text-dec-none {
+    text-decoration: none;
+}
+
+.gilda-display-regular {
+    font-family: "Gilda Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.electrolize-regular {
+    font-family: "Electrolize", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.delius-swash {
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.grenze-gotisch {
+    font-family: "Grenze Gotisch", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.finger-paint-regular {
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.baloo-bhai-2 {
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
