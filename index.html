@@ -41,7 +41,7 @@
         </div>
 
         <div class="content center">
-            <h3 class="animate__animated animate__bounce">Exploring the Infinite Horizons of Space</h3>
+            <h3 class="main-ani">Exploring the Infinite Horizons of Space</h3>
             <h1 class="finger-paint-regular">B-YOND</h1>
         </div>
     </div>
@@ -68,24 +68,25 @@
 
     <div class="planet bg-pinkgrad">
         <div class="planet-para center">
-            <h6 class="animate__animated animate__tada">PLANETS</h6>
-            <p class="center animate__animated animate__fadeIn">The Solar System is a collection of celestial objects that are located around the Sun, including 8 planets and numerous Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem minus iure eos accusamus dolorum? Doloremque dolor minus
+            <h6 class="planet-ani zoom">PLANETS</h6>
+            <p class="planet-p-ani">The Solar System is a collection of celestial objects that are located around the Sun, including 8 planets and numerous Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem minus iure eos accusamus dolorum? Doloremque dolor minus
                 soluta numquam incidunt ipsum molestias, iste delectus laborum deleniti iusto eaque corrupti saepe eveniet, placeat provident officia sequi maiores? Enim natus perferendis aliquid ipsam quod iure illum explicabo ut ex? Eaque, itaque. Hic
                 assumenda in architecto illo harum consequatur consequuntur minus, laudantium deserunt?
             </p>
         </div>
         <div class="planet-img">
-            <img src="planets.png" alt="B-YOND" class="center animate__animated animate__backInRight">
+            <img src="planets.png" alt="B-YOND" class="center fadesUp planet-img-ani">
         </div>
     </div>
 
     <div class="mission">
-        <h1 class="center madimi-one-regular animate__animated animate__rubberBand missionh">Our Mission</h1>
+        <h1 class="center madimi-one-regular mission-ani missionh">Our Mission</h1>
         <div class="missioncon center">
             <span class="m1 boxsadnone">
-                <img src="2.png" alt="B-YOND">
-                <h5 class="heading bg-yellow">International space station</h5>
-                <p class=" center madimi-one-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <img src="2.png" alt="B-YOND" class="fadesUp mission-img-ani">
+                <h5 class="heading bg-yellow mission-h-ani">International space station</h5>
+                <p class=" center madimi-one-regular mission-p-ani">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
                     Blanditiis illum iure
                     earum quaerat magnam
                     repellendus non, officiis, hic neque consectetur voluptatum quisquam ut repellat, dolore fugit
@@ -94,9 +95,10 @@
                     nulla illum mollitia voluptatibus a nobis at eius dicta.</p>
             </span>
             <span class="m1 boxsadnone">
-                <img src="1.png" alt="B-YOND">
-                <h5 class="heading bg-yellow">Voyager 1</h5>
-                <p class="center madimi-one-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <img src="1.png" alt="B-YOND" class=" fadesUp mission-img-ani">
+                <h5 class="heading bg-yellow mission-h-ani">Voyager 1</h5>
+                <p class="center madimi-one-regular mission-p-ani">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
                     Blanditiis illum iure
                     earum quaerat magnam
                     repellendus non, officiis, hic neque consectetur voluptatum quisquam ut repellat, dolore fugit
@@ -105,9 +107,10 @@
                     animi eos quisquam facere aspernatur ipsam nostrum neque voluptatem! Aspernatur!</p>
             </span>
             <span class="m1 boxsadnone">
-                <img src="3.png" alt="B-YOND">
-                <h5 class="heading bg-yellow">Voyager 2</h5>
-                <p class=" center madimi-one-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <img src="3.png" alt="B-YOND" class="fadesUp mission-img-ani">
+                <h5 class="heading bg-yellow mission-h-ani">Voyager 2</h5>
+                <p class=" center madimi-one-regular mission-p-ani">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
                     Blanditiis illum iure
                     earum quaerat magnam
                     repellendus non, officiis, hic neque consectetur voluptatum quisquam ut repellat, dolore fugit
@@ -119,7 +122,7 @@
     </div>
     <div class="tp">
         <div class="tp-h">
-            <h4 class="center ">Our Trusted Partner</h4>
+            <h4 class="center partner-ani flips">Our Trusted Partner</h4>
         </div>
         <div class="slideshow-container">
 
@@ -159,7 +162,7 @@
 
     </div>
 
-    <footer class="footer bg-black">
+    <footer class="footer bg-black footer-ani fadesUp">
         <div class="footer-upper bg-purple">
             <a href="#" class="text-dec-none bg-ltpurple rad2">
                 <div class="footer-web bg-ltpurple rad2">
@@ -224,6 +227,142 @@
 
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.main-ani');
+            let lastScrollTop = 0;
+
+            const checkAnimation = () => {
+                elements.forEach((el, index) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        setTimeout(() => {
+                            el.classList.add('animate__animated', 'animate__flipInX');
+                        }, index * 500); // Adjust delay for staggered effect
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    checkAnimation();
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // Initial check in case elements are already in view
+            checkAnimation();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.main-ani');
+            let lastScrollTop = 0;
+
+            const checkAnimation = () => {
+                elements.forEach((el, index) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        setTimeout(() => {
+                            el.classList.add('animate__animated', 'animate__fadeInUp ');
+                        }, index * 500); // Adjust delay for staggered effect
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    checkAnimation();
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // Initial check in case elements are already in view
+            checkAnimation();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fadesUp');
+            let lastScrollTop = 0;
+
+            const checkAnimation = () => {
+                elements.forEach((el, index) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        setTimeout(() => {
+                            el.classList.add('animate__animated', 'animate__fadeInUp');
+                        }, index * 500); // Adjust delay for staggered effect
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    checkAnimation();
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // Initial check in case elements are already in view
+            checkAnimation();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.flips');
+            let lastScrollTop = 0;
+
+            const checkAnimation = () => {
+                elements.forEach((el, index) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        setTimeout(() => {
+                            el.classList.add('animate__animated', 'animate__flip');
+                        }, index * 500); // Adjust delay for staggered effect
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    checkAnimation();
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // Initial check in case elements are already in view
+            checkAnimation();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.zoom');
+            let lastScrollTop = 0;
+
+            const checkAnimation = () => {
+                elements.forEach((el, index) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        setTimeout(() => {
+                            el.classList.add('animate__animated', 'animate__zoomInDown');
+                        }, index * 500); // Adjust delay for staggered effect
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    checkAnimation();
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // Initial check in case elements are already in view
+            checkAnimation();
+        });
+    </script>
 
 
 
@@ -269,44 +408,47 @@
 
 
     <script>
-        var $missionh = $('.missionh');
-        var $container1 = $('.content71');
-        var $container2 = $('.content73');
-        var $container3 = $('.content74');
-        var $follow = $('.header');
-        var $followme = $('.lion');
-        var $followme1 = $('.contact');
-        var $pop = $('.extra');
-        //
-        $pop.waypoint(function() {
-            $pop.addClass('js-pop');
-        }, {
-            offset: '70%'
-        });
-        $missionh.waypoint(function() {
-            $missionh.addClass('js-missionh');
-        }, {
-            offset: '50%'
-        });
-        $followme1.waypoint(function() {
-            $followme1.addClass('js-followme1');
-        }, {
-            offset: '80%'
-        });
-        $container.waypoint(function() {
-            $container.addClass('js-animate');
-        }, {
-            offset: '80%'
-        });
-        $container1.waypoint(function() {
-            $container1.addClass('js-animate1');
-        }, {
-            offset: '80%'
-        });
-        $container2.waypoint(function() {
-            $container2.addClass('js-animate2');
-        }, {
-            offset: '80%'
+        $(document).ready(function() {
+
+            var $planet = $('.planet');
+            var $mission = $('.mission');
+            var $main = $('.main-ani');
+            var $container3 = $('.content74');
+            var $follow = $('.header');
+            var $followme = $('.lion');
+            var $followme1 = $('.contact');
+            var $pop = $('.extra');
+            //
+            $mainn.waypoint(function() {
+                $mainn.addClass('js-mainn');
+            }, {
+                offset: '70%'
+            });
+            $missionn.waypoint(function() {
+                $missionn.addClass('js-missionn');
+            }, {
+                offset: '50%'
+            });
+            $planett.waypoint(function() {
+                $planett.addClass('js-planett');
+            }, {
+                offset: '80%'
+            });
+            $container.waypoint(function() {
+                $container.addClass('js-animate');
+            }, {
+                offset: '80%'
+            });
+            $container1.waypoint(function() {
+                $container1.addClass('js-animate1');
+            }, {
+                offset: '80%'
+            });
+            $container2.waypoint(function() {
+                $container2.addClass('js-animate2');
+            }, {
+                offset: '80%'
+            });
         });
     </script>
 </body>

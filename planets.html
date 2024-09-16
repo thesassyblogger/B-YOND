@@ -13,6 +13,8 @@
     <script src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Marck+Script&family=Neucha&family=Sacramento&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Madimi+One&family=Marck+Script&family=Neucha&family=Sacramento&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,6 +51,8 @@
     <nav class="nav" id="navbar">
 
 
+
+
         <div class="logo">
             <!-- <span class="logoo">BYOND</span> -->
             <img src="byond (2).jpeg" alt="B-YOND" />
@@ -71,7 +75,7 @@
             <img src="Black Yellow Illustrative Space Planets Phone Wallpaper.png" alt="B-YOND">
         </div>
         <div class="pnt-list">
-            <div id="mercury">
+            <div id="mercury" class="planet-section">
                 <div class="mercury">
                     <h1 id="planet">Mercury</h1>
                     <p id="planet-para">Mercury is the first planet from the Sun and the smallest in the Solar System. In English, it is named after the ancient Roman god Mercurius, god of commerce and communication, and the messenger of the gods.</p>
@@ -80,7 +84,7 @@
                     <img src="mercury.png" alt="B-YOND" id="mer-img">
                 </div>
             </div>
-            <div id="venus">
+            <div id="venus" class="planet-section">
                 <div class="venus">
                     <h1 id="planet">Venus</h1>
                     <p id="planet-para">Mercury is the first planet from the Sun and the smallest in the Solar System. In English, it is named after the ancient Roman god Mercurius, god of commerce and communication, and the messenger of the gods.</p>
@@ -89,7 +93,7 @@
                     <img src="venus1.webp" alt="B-YOND" id="ver-img">
                 </div>
             </div>
-            <div id="earth">
+            <div id="earth" class="planet-section">
                 <div class="earth">
                     <h1 id="planet">Earth</h1>
                     <p id="planet-para">Mercury is the first planet from the Sun and the smallest in the Solar System. In English, it is named after the ancient Roman god Mercurius, god of commerce and communication, and the messenger of the gods.</p>
@@ -98,7 +102,7 @@
                     <img src="earth.webp" alt="B-YOND" id="ear-img">
                 </div>
             </div>
-            <div id="mars">
+            <div id="mars" class="planet-section">
                 <div class="mars">
                     <h1 id="planet">Mars</h1>
                     <p id="planet-para">Mercury is the first planet from the Sun and the smallest in the Solar System. In English, it is named after the ancient Roman god Mercurius, god of commerce and communication, and the messenger of the gods.</p>
@@ -107,7 +111,7 @@
                     <img src="mars.webp" alt="B-YOND" id="mars-img">
                 </div>
             </div>
-            <div id="jupiter">
+            <div id="jupiter" class="planet-section">
                 <div class="jupiter">
                     <h1 id="planet">Jupiter</h1>
                     <p id="planet-para">Mercury is the first planet from the Sun and the smallest in the Solar System. In English, it is named after the ancient Roman god Mercurius, god of commerce and communication, and the messenger of the gods.</p>
@@ -116,7 +120,7 @@
                     <img src="jupiter.png" alt="B-YOND" id="jup-img">
                 </div>
             </div>
-            <div id="saturn">
+            <div id="saturn" class="planet-section">
                 <div class="saturn">
                     <h1 id="planet">Saturn</h1>
                     <p id="planet-para">Mercury is the first planet from the Sun and the smallest in the Solar System. In English, it is named after the ancient Roman god Mercurius, god of commerce and communication, and the messenger of the gods.</p>
@@ -125,7 +129,7 @@
                     <img src="saturn.webp" alt="B-YOND" id="sat-img">
                 </div>
             </div>
-            <div id="uranus">
+            <div id="uranus" class="planet-section">
                 <div class="uranus">
                     <h1 id="planet">Uranus</h1>
                     <p id="planet-para">Mercury is the first planet from the Sun and the smallest in the Solar System. In English, it is named after the ancient Roman god Mercurius, god of commerce and communication, and the messenger of the gods.</p>
@@ -134,7 +138,7 @@
                     <img src="uranus.webp" alt="B-YOND" id="ura-img">
                 </div>
             </div>
-            <div id="neptune">
+            <div id="neptune" class="planet-section">
                 <div class="neptune">
                     <h1 id="planet">Neptune</h1>
                     <p id="planet-para">Mercury is the first planet from the Sun and the smallest in the Solar System. In English, it is named after the ancient Roman god Mercurius, god of commerce and communication, and the messenger of the gods.</p>
@@ -146,7 +150,7 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer fadesUp">
         <div class="footer-upper">
             <a href="index.html" class="text-dec-none">
                 <div class="footer-web">
@@ -210,8 +214,64 @@
 
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fadesUp');
+            let lastScrollTop = 0;
+
+            const checkAnimation = () => {
+                elements.forEach((el, index) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        setTimeout(() => {
+                            el.classList.add('animate__animated', 'animate__fadeInUp');
+                        }, index * 500); // Adjust delay for staggered effect
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    checkAnimation();
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // Initial check in case elements are already in view
+            checkAnimation();
+        });
+    </script>
 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.planet-section');
+            let lastScrollTop = 0;
+
+            const checkAnimation = () => {
+                elements.forEach((el, index) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        setTimeout(() => {
+                            el.classList.add('animate__animated', 'animate__backInRight');
+                        }, index * 500); // Adjust delay for staggered effect
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    checkAnimation();
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // Initial check in case elements are already in view
+            checkAnimation();
+        });
+    </script>
 
     <script>
         window.onscroll = function() {
